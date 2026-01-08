@@ -7,14 +7,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-tr from-[#0f2027] via-[#203a43] to-[#2c5364] flex justify-center p-6">
+<body class="min-h-screen bg-gradient-to-tr from-[#0f2027] via-[#203a43] to-[#2c5364] flex justify-center py-16">
 
   <!-- Main Dashboard -->
   <div class="w-full max-w-6xl bg-white/5 backdrop-blur-2xl rounded-3xl shadow-2xl p-8">
 
     <!-- Heading -->
     <h1 class="text-4xl font-extrabold text-center text-white mb-10 drop-shadow-xl">
-      Smart Task Manager
+      Smart <span class="text-cyan-400">Task Manager</span>
     </h1>
 
     <!-- Layout -->
@@ -23,9 +23,7 @@
       <!-- LEFT PANEL : ADD TASK -->
       <div class="md:col-span-1 bg-white/10 rounded-2xl p-6 space-y-4">
 
-        <h2 class="text-xl font-semibold text-white">
-          Add New Task
-        </h2>
+        <h2 class="text-xl font-semibold text-white">Add New Task</h2>
 
         <!-- Title -->
         <input
@@ -59,14 +57,25 @@
       <!-- RIGHT PANEL : TASKS -->
       <div class="md:col-span-2 space-y-6">
 
-        <!-- Search -->
-        <input
-          type="text"
-          placeholder="Search tasks..."
-          class="w-full px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-        />
+        <!-- Search + Sort -->
+        <div class="flex flex-col md:flex-row gap-3">
+          <input
+            type="text"
+            placeholder="Search tasks..."
+            class="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          />
+          <select
+            class="px-4 py-3 rounded-xl bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          >
+            <option value="latest" class="bg-[#203a43]">Latest First</option>
+            <option value="oldest" class="bg-[#203a43]">Oldest First</option>
+            <option value="date" class="bg-[#203a43]">Due Date</option>
+            <option value="az" class="bg-[#203a43]">A → Z</option>
+            <option value="za" class="bg-[#203a43]">Z → A</option>
+          </select>
+        </div>
 
-        <!-- Filters -->
+        <!-- Status Filters -->
         <div class="flex gap-3">
           <button class="flex-1 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl text-white font-medium">
             All
@@ -85,9 +94,7 @@
           <!-- Task Item -->
           <li class="flex justify-between items-start p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition">
             <div>
-              <p class="text-white font-semibold text-lg">
-                Learn JavaScript
-              </p>
+              <p class="text-white font-semibold text-lg">Learn JavaScript</p>
               <p class="text-white/70 text-sm mt-1">
                 Practice closures, promises, async/await daily.
               </p>
