@@ -35,8 +35,7 @@ This app helps users manage daily tasks efficiently with features like add, edit
 
 ## 📂 Project Structure
 -  Task Manager 
-- index.html
-- style.css
+- index.html + tailwindcss
 - script.js
 - README.md
 
