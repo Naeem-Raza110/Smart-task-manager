@@ -22,7 +22,6 @@ function loadTasks() {
   }
 }
 
-
 /* ---------- Render Tasks ---------- */
 function renderTasks() {
   let filteredTasks = [...tasks];
@@ -64,7 +63,8 @@ function renderTasks() {
   filteredTasks.forEach((task) => {
     const li = document.createElement("li");
     li.dataset.id = task.id;
-    li.className = "flex justify-between items-start p-4 bg-white/10 rounded-2xl";
+    li.className =
+      "flex justify-between items-start p-4 bg-white/10 rounded-2xl";
 
     li.innerHTML = `
       <div>
@@ -75,9 +75,9 @@ function renderTasks() {
         <span class="text-xs text-white/60">Due: ${task.date}</span>
       </div>
       <div class="flex gap-2">
-        <button class="edit-btn cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-400  rounded-xl text-white font-medium px-3 py-1">Edit</button>
-        <button class="delete-btn cursor-pointer bg-gradient-to-r from-red-400 to-blue-500 rounded-xl text-white font-medium px-3 py-1">Delete</button>
-        <button class="complete-btn cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 rounded-xl text-white font-medium px-3 py-1">
+        <button class="edit-btn cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-blue-400 hover:to-cyan-400  rounded-xl text-white font-medium px-3 py-1">Edit</button>
+        <button class="delete-btn cursor-pointer bg-gradient-to-r from-red-400 to-blue-500 hover:from-blue-500 hover:to-red-400 rounded-xl text-white font-medium px-3 py-1">Delete</button>
+        <button class="complete-btn cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400 rounded-xl text-white font-medium px-3 py-1">
           ${task.status === "completed" ? "Undo" : "Done"}
         </button>
       </div>
