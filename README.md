@@ -1,4 +1,4 @@
-# Task Manager App
+ # Task Manager App
 
 A modern and user-friendly Task Manager built with vanilla JavaScript.  
 This app helps users manage daily tasks efficiently with features like add, edit, delete, search, filter, sort, and local storage persistence.
