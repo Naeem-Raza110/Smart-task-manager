@@ -1,4 +1,4 @@
-                           
+                            
 # Task Manager App
 
 A modern and user-friendly Task Manager built with vanilla JavaScript.  
