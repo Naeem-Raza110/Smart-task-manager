@@ -52,7 +52,7 @@
           <!-- Add Button -->
           <button
             id="add-task-btn"
-            class="w-full py-3 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 rounded-xl font-semibold text-white shadow-lg transition"
+            class="w-full py-3 cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 rounded-xl font-semibold text-white shadow-lg transition"
           >
             Add Task
           </button>
@@ -68,23 +68,51 @@
               placeholder="Search tasks..."
               class="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-400"
             />
-            <select
-              id="sort-task"
-              class="px-4 py-3 rounded-xl bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-            >
-              <option value="latest" class="bg-[#203a43]">Latest First</option>
-              <option value="oldest" class="bg-[#203a43]">Oldest First</option>
-              <option value="date" class="bg-[#203a43]">Due Date</option>
-              <option value="az" class="bg-[#203a43]">A → Z</option>
-              <option value="za" class="bg-[#203a43]">Z → A</option>
-            </select>
+            <div class="relative w-fit">
+              <select
+                id="sort-task"
+                class="appearance-none px-4 py-3 pr-10 cursor-pointer rounded-xl bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              >
+                <option value="latest" class="bg-[#203a43]">
+                  Latest First
+                </option>
+                <option value="oldest" class="bg-[#203a43]">
+                  Oldest First
+                </option>
+                <option value="date" class="bg-[#203a43]">Due Date</option>
+                <option value="az" class="bg-[#203a43]">A → Z</option>
+                <option value="za" class="bg-[#203a43]">Z → A</option>
+              </select>
+
+              <!-- Custom icon -->
+              <span
+                class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/70"
+              >
+                &#9662;
+              </span>
+            </div>
           </div>
 
           <!-- Status Filters -->
           <div class="flex gap-3 mb-4">
-            <button class="filter-btn flex-1 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl text-white font-medium" data-status="all">All</button>
-            <button class="filter-btn flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-white" data-status="pending">Pending</button>
-            <button class="filter-btn flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-white" data-status="completed">Completed</button>
+            <button
+              class="filter-btn cursor-pointer flex-1 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 rounded-xl text-white font-medium"
+              data-status="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn cursor-pointer flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-white"
+              data-status="pending"
+            >
+              Pending
+            </button>
+            <button
+              class="filter-btn cursor-pointer flex-1 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-white"
+              data-status="completed"
+            >
+              Completed
+            </button>
           </div>
 
           <!-- Task List -->
@@ -93,7 +121,6 @@
       </div>
     </div>
 
-   <script src="script.js"></script>
-    
+    <script src="script.js"></script>
   </body>
 </html>

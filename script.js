@@ -21,8 +21,9 @@ function loadTasks() {
     tasks = JSON.parse(data);
   }
 }
-/* --------------------------------- */
 
+
+/* ---------- Render Tasks ---------- */
 function renderTasks() {
   let filteredTasks = [...tasks];
 
@@ -74,9 +75,9 @@ function renderTasks() {
         <span class="text-xs text-white/60">Due: ${task.date}</span>
       </div>
       <div class="flex gap-2">
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-        <button class="complete-btn">
+        <button class="edit-btn cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-400  rounded-xl text-white font-medium px-3 py-1">Edit</button>
+        <button class="delete-btn cursor-pointer bg-gradient-to-r from-red-400 to-blue-500 rounded-xl text-white font-medium px-3 py-1">Delete</button>
+        <button class="complete-btn cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 rounded-xl text-white font-medium px-3 py-1">
           ${task.status === "completed" ? "Undo" : "Done"}
         </button>
       </div>
